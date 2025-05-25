@@ -1,15 +1,15 @@
 services:
   - type: web
-    name: enhanced-med-backend
+    name: medical-backend
     env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn app:app
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn app:app"
     envVars:
-      - key: OPENAI_API_KEY
-        value: your-api-key-here
+      - key: OPENROUTER_API_KEY
+        sync: false  # Set this manually in the Render dashboard
 
   - type: web
-    name: enhanced-med-frontend
+    name: medical-frontend
     env: static
-    buildCommand: cd medical-chatbot-frontend && npm install && npm run build
-    staticPublishPath: medical-chatbot-frontend/build
+    buildCommand: "cd medical-chatbot-frontend && npm install && npm run build"
+    staticPublishPath: "medical-chatbot-frontend/build"
