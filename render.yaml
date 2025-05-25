@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: enhanced-med-backend
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: OPENAI_API_KEY
+        value: your-api-key-here
+
+  - type: web
+    name: enhanced-med-frontend
+    env: static
+    buildCommand: cd medical-chatbot-frontend && npm install && npm run build
+    staticPublishPath: medical-chatbot-frontend/build
