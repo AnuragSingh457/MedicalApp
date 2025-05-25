@@ -1,0 +1,17 @@
+# Ignore models and large files
+*.keras
+*.pkl
+uploads/
+assets/
+
+# Node.js build
+medical-chatbot-frontend/node_modules/
+medical-chatbot-frontend/build/
+
+# Python stuff
+__pycache__/
+*.pyc
+.env
+
+# VSCode or IDE settings
+.vscode/
