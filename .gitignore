@@ -15,3 +15,6 @@ __pycache__/
 
 # VSCode or IDE settings
 .vscode/
+medical-chatbot-frontend/node_modules/
+medical-chatbot-frontend/build/
+medical-chatbot-frontend/.git
